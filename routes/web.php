@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BoardsController;
+use App\Http\Controllers\Pdf;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,3 +19,5 @@ Route::get('/', function () {
 });
 
 Route::resource('boards', BoardsController::class);
+Route::resource('pdf', Pdf::class);
+Route::get('/pdf', [PdfController::class, 'index']);
